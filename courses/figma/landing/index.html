@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phantom</title>
+    <link rel="stylesheet" href="compiled.css">
+</head>
+
+<body class="bg-body">
+    <nav id="navbar" class="backdrop-filter backdrop-blur-2xl flex flex-row 
+    px-30 py-20 md:px-20 z-50 fixed w-full top-0 justify-between items-center">
+
+        <div class="flex items-center">
+            <img class="mr-10" id="logo-img" src="./src/icons/phantom-logo.svg" alt="phantom logo">
+            <h3 class="md:hidden font-bold">Phantom</h3>
+            <p class="text-primary hidden font-medium md:block">Phantom</p>
+        </div>
+
+        <div id="navbar-links" class="hidden md:grid grid-flow-col auto-cols-min lg:gap-50 md:gap-30">
+            <a href="#" id="active-nav-link">Overview</a>
+            <a href="#">Security</a>
+            <a href="#">Blog</a>
+            <span class="relative" id="help-dropdown-toggle">
+                <a href="#">Help<span class="text-base">▼</span></a>
+                <div id="help-dropdown-content" class="">
+                    <a class="font-p2-md" href="#">Support</a>
+                    <a class="font-p2-md" href="#">Forum</a>
+                    <a class="font-p2-md" href="#">FAQ</a>
+                </div>
+            </span>
+        </div>
+
+        <button class="add-wallet-btn bg-btn-primary rounded-full hidden md:block text-primary" type="button">
+            <p class="text-btn font-btn text-primary text-center">Add to Chrome</p>
+        </button>
+
+        <button class="md:hidden" type="button" id="menu-toggle">
+            <img id="navbar-toggle-image" src="./src/icons/hamburger-icon.svg" alt="hamburger">
+        </button>
+
+        <div id="dropdown-menu" class="md:hidden hidden absolute p-60 w-29/30 mx-auto right-0 top-4 left-0 rounded-md bg-footer 
+            focus:outline-none">
+            <div class="flex flex-row justify-between items-center mb-15">
+                <h3 class="font-medium">Phantom</h3>
+                <button id="close-dropdown">
+                    <img id="close-dropdown-icon" src="./src/icons/close-dropdown-icon.svg" alt="close dropdown icon">
+                </button>
+            </div>
+            <ul class="text-white text-opacity-60 text-4xl">
+                <li class="mb-15"><a class="md:text-p2-md md:font-p2-md" href="#">Overview</a></li>
+                <li class="mb-15"><a class="md:text-p2-md md:font-p2-md" href="#">Security</a></li>
+                <li class="mb-15"><a class="md:text-p2-md md:font-p2-md" href="#">Blog</a></li>
+                <li class="mb-15"><a class="md:text-p2-md md:font-p2-md" href="#">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="body-container" class="md:max-w-6xl md:mx-auto grid grid-flow-rows gap-120 px-30 pb-100 pt-200
+    md:gap-70 md:px-20 md:pb-70 md:pt-120">
+        <div id="header" class="grid grid-flow-row gap-60 md:gap-40 justify-items-center">
+            <h1 class="text-center">A crypto wallet you'll <span class="text-selected">love</span></h1>
+
+            <p class="text-center w-4/5">
+                Phantom makes it safe & easy for you to store, send, receive, stake, and swap tokens on the Solana
+                blockchain
+            </p>
+
+            <button
+                class="add-wallet-btn bg-btn-primary rounded-full md:hidden self-start md:block text-primary mx-auto"
+                type="button">
+                <p class="text-primary text-center font-bold">Download</p>
+            </button>
+
+            <button class="add-wallet-btn bg-btn-primary rounded-full hidden self-start md:block text-primary mx-auto"
+                type="button">
+                <p class="text-btn font-btn text-primary text-center">Add to Chrome</p>
+            </button>
+        </div>
+
+        <div class="hidden md:grid grid-cols-2 gap-40 py-40 pr-20 items-center rounded-md bg-gradient-purple-1">
+
+            <div class="float-right">
+                <img src="./src/images/browser-wallet-screen.png" alt="">
+            </div>
+
+            <div class="grid grid-flox-rows gap-40">
+                <h1 class="self-end">Turn your browser into a crypto wallet</h1>
+                <p class="self-start">Phantom unlocks a simple and secure way tointeract with blockchain-based
+                    applications directly from your favorite web browser.</p>
+            </div>
+        </div>
+
+        <div class="flex justify-center flex-wrap flex-row py-20 py-100 mb-20 rounded-md items-center 
+        bg-gradient-purple-1 md:hidden">
+            <h2 class="text-center mb-60 block px-40">Turn your browser into a crypto wallet</h2>
+
+            <div class="float-right mb-60 pr-40">
+                <img src="./src/images/browser-wallet-screen.png" alt="">
+            </div>
+            <p class="px-40">Phantom unlocks a simple and secure way tointeract with blockchain-based applications
+                directly from
+                your favorite web browser.</p>
+        </div>
+
+        <div class="grid grid-flow-rows gap-60 md:gap-40">
+            <h1 class="text-center">All the features you want</h1>
+            <p class="text-center">Phantom has everything you need to traverse the Solana ecosystem</p>
+
+            <div class="grid md:grid-cols-3 gap-60 md:gap-40 md:grid-rows-2">
+                <div class="feature-text-block flex flex-col justify-center">
+                    <h3 class="mb-20">Non-custodial</h3>
+                    <p class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md">We never have access to any of your
+                        data and fund. Ever.</p>
+                </div>
+                <div class="feature-text-block flex flex-col justify-center">
+                    <h3 class="mb-20">Token Swaps</h3>
+                    <p class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md">Use our built-in DEX to safely swap
+                        tokens at the best prices, instantly.</p>
+                </div>
+                <div class="feature-text-block flex flex-col justify-center">
+                    <h3 class="mb-20">NFTs and Collectibles</h3>
+                    <p class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md">We’ve taken special care to make sure
+                        your NFTs look great!</p>
+                </div>
+                <div class="feature-text-block flex flex-col justify-center">
+                    <h3 class="mb-20">Ledger Support Swaps</h3>
+                    <p class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md">For additional security you can connect
+                        your hardware wallet.</p>
+                </div>
+                <div class="feature-text-block flex flex-col justify-center">
+                    <h3 class="mb-20">Web3 Support</h3>
+                    <p class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md">Explore the world of blockchain
+                        applications built on Solana.</p>
+                </div>
+                <div class="feature-text-block flex flex-col justify-center">
+                    <h3 class="mb-20">SOL Staking</h3>
+                    <p class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md">Earn rewards by staking directly inside
+                        your wallet.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-flow-row lg:grid-flow-col lg:auto-cols-auto w-full py-60 md:py-30 px-40 rounded-md items-center 
+            justify-center lg:justify-between bg-gradient-purple-2 gap-40 md:gap-20">
+            <div class="grid grid-flow-row lg:grid-flow-col items-center justify-items-center">
+                <img id="eth-logo" class="filter brightness-125"
+                    src="./src/images/ethereum-logo-transp.png" alt="eth-logo">
+                <div>
+                    <h2 class="text-center md:text-left">Join Ethereum beta</h2>
+                    <p class="text-center md:text-left mb-10">Sign up to join the Ethereum beta waitlist</p>
+                </div>
+            </div>
+
+            <form class="relative lg:mt-0 flex flex-row items-center">
+                <input type="email" id="input-email" class="transition w-full duration-500 ease-in-out focus:outline-none focus:ring-4 md:focus:ring-2 focus:ring-white 
+                    focus:ring-opacity-30 md:text-p2-md text-primary font-medium rounded-full bg-black bg-opacity-30"
+                    placeholder="Email">
+                <button id="submit-email" class="absolute right-2" type="button">
+                    <svg class="hidden md:block" width="35" height="35" viewBox="0 0 35 34" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="17.5" cy="17" rx="17.5" ry="17" fill="url(#paint0_linear)" />
+                        <path
+                            d="M27.7071 17.7071C28.0976 17.3166 28.0976 16.6834 27.7071 16.2929L21.3431 9.92893C20.9526 9.53841 20.3195 9.53841 19.9289 9.92893C19.5384 10.3195 19.5384 10.9526 19.9289 11.3431L25.5858 17L19.9289 22.6569C19.5384 23.0474 19.5384 23.6805 19.9289 24.0711C20.3195 24.4616 20.9526 24.4616 21.3431 24.0711L27.7071 17.7071ZM8 18L27 18V16L8 16V18Z"
+                            fill="white" />
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="17.5" y1="0" x2="17.5" y2="34"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7369E3" />
+                                <stop offset="1" stop-color="#443BB7" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <img class="md:hidden" src="./src/icons/button-send-email.svg" alt="send-email-button">
+                </button>
+                <p id="invalid-email-hint" class="absolute hidden">Invalid email</p>
+            </form>
+        </div>
+    </div>
+
+
+    <footer class="bg-footer">
+        <div class="md:max-w-6xl md:mx-auto px-80 py-120 md:py-50 flex flex-col justify-between lg:flex-row">
+            <div class="w-full mb-70 md:mb-20 lg:mb-0 lg:w-1/2">
+                <h2 class="mb-10 inline-block md:w-full">Phantom</h2>
+                <p class="mb-10 text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md inline-block md:w-full">@ Phantom
+                    Technologies, Inc.</p>
+            </div>
+            <div class="grid grid-rows-4 sm:grid-rows-2 grid-flow-col md:grid-flow-col md:grid-rows-1 justify-between lg:w-1/2 
+            gap-70 md:gap-0">
+                <div class="md:mb-5 md:mr-6 w-full md:w-2/5 md:inline-block md:align-top">
+                    <h3 class="mb-20 md:mb-10">Product</h3>
+                    <ul class="">
+                        <li class="mb-20 md:mb-10"><a
+                                class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md md:text-p2-md"
+                                href="">Overview</a></li>
+                        <li class="mb-20 md:mb-10"><a class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md"
+                                href="">Download</a></li>
+                        <li class="mb-20 md:mb-10"><a class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md"
+                                href="">Security</a></li>
+                        <li class="mb-20 md:mb-10"><a class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md"
+                                href="">Help</a></li>
+                    </ul>
+                </div>
+                <div class="mb-5 mr-6 w-full md:w-2/5 md:inline-block md:align-top">
+                    <h3 class="mb-20 md:mb-10">Resource</h3>
+                    <ul class="">
+                        <li class="mb-20 md:mb-10"><a class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md"
+                                href="">Overview</a></li>
+                        <li class="mb-20 md:mb-10"><a class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md"
+                                href="">Download</a></li>
+                        <li class="mb-20 md:mb-10"><a class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md"
+                                href="">Security</a></li>
+                        <li class="mb-20 md:mb-10"><a class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md"
+                                href="">Help</a></li>
+                    </ul>
+                </div>
+                <div class="mb-5 mr-6 w-full md:w-2/5 md:inline-block md:align-top">
+                    <h3 class="mb-20 md:mb-10">Company</h3>
+                    <ul class="">
+                        <li class="mb-20 md:mb-10"><a class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md"
+                                href="">About</a></li>
+                        <li class="mb-20 md:mb-10"><a class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md"
+                                href="">Jobs</a></li>
+                        <li class="mb-20 md:mb-10"><a class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md"
+                                href="">Press Kit</a></li>
+                    </ul>
+                </div>
+                <div class="mb-5 mr-6 w-full md:w-2/5 md:inline-block md:align-top">
+                    <h3 class="mb-20 md:mb-10">Social</h3>
+                    <ul class="">
+                        <li class="mb-20 md:mb-10"><a class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md"
+                                href="">Twitter</a></li>
+                        <li class="mb-20 md:mb-10"><a class="text-p2-sm font-p2-sm md:text-p2-md md:font-p2-md"
+                                href="">Discord</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('#menu-toggle')
+            const dropdown = document.querySelector('#dropdown-menu')
+            const closeBtn = document.querySelector('#close-dropdown')
+            
+            menuBtn.addEventListener('click', () => {
+                dropdown.classList.toggle('hidden')
+            })
+
+            closeBtn.addEventListener('click', () => {
+                dropdown.classList.toggle('hidden')
+            })
+
+            window.addEventListener('click', () => {
+                if(!event.target.matches('#navbar-toggle-image') &&
+                !event.target.matches('#navbar-toggle-image')) {
+                    if(!dropdown.classList.contains('hidden')) {
+                        dropdown.classList.toggle('hidden')
+                    }
+                }
+            })
+
+            const hint = document.querySelector('#invalid-email-hint')
+            const submitEmailBtn = document.querySelector('#submit-email')
+            submitEmailBtn.addEventListener('click', () => {
+                hint.classList.toggle('hidden')
+            })
+        })
+    </script>
+</body>
+
+</html>
