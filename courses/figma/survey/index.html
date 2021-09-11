@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="compiled.css">
+</head>
+
+<body>
+    <h1 id="title">Survey form</h1>
+    <p id="description">styled with tailwind</p>
+
+    <form id="survey-form">
+        <div class="form-control">
+            <label for="name" id="name-label">
+                Name
+            </label>
+
+            <input type="text" id="name" placeholder="Enter your name" required />
+        </div>
+
+        <div class="form-control">
+            <label for="email" id="email-label">
+                Email
+            </label>
+
+            <input type="email" id="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-control">
+            <label for="number" id="number-label">
+                Age
+            </label>
+
+            <input type="number" min="0" max="110" id="number" placeholder="Enter your age" />
+        </div>
+
+        <div class="form-control">
+            <label for="wanna" id="wanna-label">
+                Choose what you want
+            </label>
+
+            <select name="wanna" id="dropdown">
+                <option class="option" value="candies">Candies</option>
+                <option class="option" value="money">Money</option>
+                <option class="option" value="sleep">Sleep</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="radio-group" id="btn-label">
+                Here are some nice radio buttons
+            </label>
+            
+            <div class="md:inline-block mr-2">
+                <input type="radio" id="good" name="radio-group" />
+                <label for="good">Good</label>
+            </div>
+            
+            <div class="md:inline-block mr-2">
+                <input type="radio" id="cool" name="radio-group" />
+                <label for="cool">Cool</label>
+            </div>
+            
+            <div class="md:inline-block mr-2">
+                <input type="radio" id="dope" name="radio-group" />
+                <label for="dope">Dope</label>
+            </div>
+        </div>
+
+        <div class="form-control">
+            <label for="checkbox-group" id="feellike-label">I feel like...</label>
+
+            <div class="md:inline-block mr-2">
+                <input type="checkbox" id="drowing" name="checkbox-group" value="I'm drowning" />
+                <label for="drowing">I'm drowning</label>
+            </div>
+            
+            <div class="md:inline-block mr-2">
+                <input type="checkbox" id="summer" name="checkbox-group" value="summer" />
+                <label for="summer">summer</label>
+            </div>
+            
+            <div class="md:inline-block mr-2">
+                <input type="checkbox" id="that" name="checkbox-group" value="that" />
+                <label for="that">that</label>
+            </div>
+        </div>
+
+        <div class="form-control">
+            <label id="comment-label" for="comment">
+                A place where you can type your password
+            </label>
+
+            <textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
+        </div>
+
+        <div id="button-container"> 
+            <button id="submit" type="submit" value="submit">
+                Submit
+            </button>
+        </div>
+    </form>
+</body>
+
+</html>
